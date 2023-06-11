@@ -5,9 +5,9 @@ using std::cout; using std::cin;
 
 int main()
 {
-	int num, result;
+	int num;
 	cin >> num;
-	result = multiply_numbers(num);
+	int result = multiply_numbers(num);
 	cout << result << "\n";
 	return result;
 
