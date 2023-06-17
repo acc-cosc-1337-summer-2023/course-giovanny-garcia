@@ -28,7 +28,7 @@ TEST_CASE("Test get generation if else if function")
 
 TEST_CASE("Test switch menu function")
 {
-	REQUIRE(menu(0) == "Invaid Option");
+	REQUIRE(menu(0) == "Invalid Option");
 	REQUIRE(menu(1) == "Option 1");
 	REQUIRE(menu(2) == "Option 2");
 	REQUIRE(menu(3) == "Option 3");
