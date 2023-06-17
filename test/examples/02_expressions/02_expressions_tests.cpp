@@ -8,7 +8,7 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("Test int and double precedence")
 {
-	REQUIRE(convert_to_double(10, .5) == 5);
+	REQUIRE(convert_to_double(10, 0.5) == 5);
 }
 
 TEST_CASE("Test double to int conversion")
