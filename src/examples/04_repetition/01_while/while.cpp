@@ -37,7 +37,7 @@ void display(std::string str)
     while(indx < str.size())
     {
         cout<< str[indx]<<"\n";
-        indx += 1;
+        indx++;
     }
     cout<<"\n";
 }
