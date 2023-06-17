@@ -19,11 +19,11 @@ double parameter
 @param double num
 @return the num parameter
 */
-/*double convert_double_to_int(double num1)
+int convert_double_to_int(double num1)
 {
-    cout << num1;
+    return num1;
 }
-*/
+
 /*
 Function static_cast_double_int with a double parameter that does
 a static_cast conversion to int

@@ -8,7 +8,7 @@ double convert_to_double(int years, double rate);
 /*
 Write int value-return function convert_double_to_int with a double parameter
 */
-double convert_double_to_int(double num1);
+int convert_double_to_int(double num1);
 
 
 /*
