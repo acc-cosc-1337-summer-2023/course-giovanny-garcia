@@ -1,6 +1,6 @@
 #include "default.h"
 
-int add_numbersO(int num, int num1)
+int add_numbers(int num, int num1)
 {
     return num + num1;
 }

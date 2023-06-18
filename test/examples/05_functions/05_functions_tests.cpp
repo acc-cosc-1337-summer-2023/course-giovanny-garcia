@@ -29,7 +29,7 @@ TEST_CASE("Test a funcition default parameters")
 	REQUIRE(add_numbers(5) == 15);
 }
 
-TEST_CASE("Test a funcition default parameters")
+TEST_CASE("Test a funcition default parameters INT DOUBLE int int")
 {
 	REQUIRE(add_numbers(5, 10.5) == 55);
 }
