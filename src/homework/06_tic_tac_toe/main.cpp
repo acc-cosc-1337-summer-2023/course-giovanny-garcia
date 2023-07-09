@@ -23,6 +23,7 @@ int main()
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
+			
 		}
 		cout<<"Play again, enter y or Y? ";
 		cin >> user_choice;
