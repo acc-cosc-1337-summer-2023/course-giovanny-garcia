@@ -5,7 +5,7 @@ using std::cout; using std::cin;
 int main() 
 {
 	TicTacToe game;
-	string first_player;
+	std::string first_player;
 	char user_choice = 'y';
 
 	do
@@ -15,7 +15,7 @@ int main()
 
 		game.start_game(first_player);
 		int position;
-		
+
 		while(!game.game_over())
 		{
 			cout<<"Enter a position: ";
