@@ -1,5 +1,6 @@
 //cpp
 #include "tic_tac_toe.h"
+
 using std::cout;
 bool TicTacToe::game_over()
 {
@@ -56,5 +57,5 @@ bool TicTacToe::check_board_full()
             return false;
         }
     }
-    return false;  
+    return true;  
 }
