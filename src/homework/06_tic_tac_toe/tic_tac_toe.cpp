@@ -124,7 +124,7 @@ bool TicTacToe::check_diagonal_win()
         {
             return true;
         }
-    else if (pegs[3] == pegs[4] && pegs[4] == pegs[6])
+    else if (pegs[2] == pegs[4] && pegs[4] == pegs[6])
         {
             return true;
         }
