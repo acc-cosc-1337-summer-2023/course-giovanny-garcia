@@ -140,7 +140,7 @@ void TicTacToe::set_winner()
     {
         winner = "O";
     }
-    else if(player != "X")
+    else if(player == "O")
     {
         winner = "X";
     }
