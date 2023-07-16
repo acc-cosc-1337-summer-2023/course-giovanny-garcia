@@ -1,6 +1,6 @@
 //cpp
 #include "tic_tac_toe.h"
-
+#include <cmath>
 using std::cout;
 bool TicTacToe::game_over()
 {
@@ -32,18 +32,31 @@ void TicTacToe::mark_board(int position)
     set_next_player();
 }
 
-void TicTacToe::display_board () const
+std::ostream& operator<<(std::ostream& out, const TicTacToe& game)
 {
-    for(long unsigned int i=0; i < pegs.size(); i +=3)
+    for(std::size_t i=0; i < game.pegs.size(); i +=std::sqrt(game.pegs.size()))
     {
-        cout << pegs[i] << "|"<<pegs[i+1]<<"|"<<pegs[i+2]<<"\n";
+        out << game.pegs[i] << "|"<<game.pegs[i+1]<<"|"<<game.pegs[i+2]<<"\n";
+
+        if(game.pegs.size() == 16) {out<<"|"<<game.pegs[i+3];}
     }
+    return out;
 }
 
-std::string TicTacToe::get_winner()
+std::istream& operator>>(std::istream& in, TicTacToe& game)
 {
-    return winner;
+    auto position = 0;
+
+    while(position < 1 || position > std::sqrt(game.pegs.size()))
+    {
+        cout<<"Enter a position from 1-"<<game.pegs.size()<<": ";
+        in>>position;
+    }
+    game.mark_board(position);
+    return in;
 }
+
+
 
 
 void TicTacToe::clear_board()
@@ -80,58 +93,18 @@ bool TicTacToe::check_board_full()
 
 bool TicTacToe::check_column_win()
 {
-    if(pegs[0] == pegs[3] && pegs[3] == pegs[6])
-        {
-            return true;
-        }
-        else if(pegs[1] == pegs[4] && pegs[4] == pegs[7])
-        {
-            return true;
-        }
-        else if(pegs[2] == pegs[5] && pegs[5] == pegs[8])
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+    return false;
 }
 
 bool TicTacToe::check_row_win()
 {
-    if(pegs[0] ==  pegs[1] && pegs[1] == pegs[2])
-        {
-            return true;
-        }
-    else if(pegs[3] == pegs[4] && pegs[4] == pegs[5])
-        {
-            return true;
-        }
-    else if(pegs[6] == pegs[7] && pegs[7] == pegs[8])
-        {
-            return true;
-        }
-    else
-        {
-            return false;
-        }
+    return false;
 }
 
 bool TicTacToe::check_diagonal_win()
 {
-    if (pegs[0] == pegs[4] && pegs[4] == pegs[8])
-        {
-            return true;
-        }
-    else if (pegs[2] == pegs[4] && pegs[4] == pegs[6])
-        {
-            return true;
-        }
-    else
-        {
-            return false;
-        }
+    return false;
+        
 }
 
 void TicTacToe::set_winner()
